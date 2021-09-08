@@ -1,0 +1,273 @@
+/* Giving bg color to whole body */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #e2e8f0; 
+    counter-reset: bricks;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+/* display inline navbar */
+.breadcrumb-navigation > li {
+    display: inline;
+    
+    
+  }
+
+  /* styling navbar */
+  .nav{
+      
+      background-color: hsl(0, 0%, 89%);
+      padding: 15px;
+      width: 75%;
+      margin-left: 10%;
+      margin-top: 40px;
+      
+  }
+
+  .nav a{
+    text-decoration: none;
+
+  }
+
+/* Grid container formatting */
+  .container {
+      grid-gap: 10px;
+    /* height: 50vh; */
+    /* margin-left: 4rem; */
+    margin-top: 1rem;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+    
+    
+  }
+
+
+   .cell {  
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.1);
+    /* box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06); */
+  } 
+  .cell-1 {
+      padding-top: 1rem;
+      margin-left: 10rem;
+    background: white;
+    color: black;
+    width: auto;
+    text-align: center;
+    height: min-content;
+    width: auto;
+    
+  }
+/* styling body, below the image */
+
+.cell_body_1{
+    padding-top: 1rem;
+}
+
+
+  .cell-2 {
+      text-align: center;
+    grid-column: span 2;
+    background: white;
+    width: 80%;
+    height: fit-content;
+  }
+  .cell-3 {
+      height: min-content;
+      padding-left: 10px;
+      padding-right: 10px;
+    background: white;
+    margin-left: 10rem;
+    width: auto;
+    
+  }
+  .cell-3-body{
+      padding: -10px;      
+  }
+
+ 
+  .cell-4 {
+        
+      padding: 10px;
+      margin-left: 3%;
+    background: white;
+    height: auto;
+    height: min-content;
+    max-width: 362px;
+    /* max-width: auto;
+    width: 70%; */
+  }
+  .cell-5 {
+      height: min-content;
+    padding: 10px;
+    
+  background: white;
+  
+  margin-left: -6rem;
+  max-width: 362px;
+  /* width: auto;
+  width: 70%; */
+  }
+ 
+
+/* Message button in profile */
+  .btn_msg {
+    background-color: white; 
+    color: dodgerblue; 
+    border: 1px solid dodgerblue;
+    width: 4.7rem;
+    padding: 10px 7px;
+    cursor: pointer;
+    border-radius: 4px;
+    
+  }
+
+  .btn_msg:hover {
+    background: #2196F3;
+    color: white;
+  }
+
+  /* Follow button in profile*/
+
+  .btn_follow {
+      background-color: dodgerblue; /* Blue */
+      color: white;  
+      border: dodgerblue;
+      width: 4.7rem;
+      padding: 10px 5px;
+      cursor: pointer;
+      border-radius: 4px;
+    } 
+
+/* making image circle */
+    img {
+        border-radius: 50%;
+      }
+
+      /* styling the icon */
+i{
+    font-size: 13px;
+}
+
+/* styling the text beside icon */
+.log_text{
+    float: right;
+    color: darkgrey;
+}
+
+
+
+
+/* Making 2 inner grids */
+  #inner-grid {
+      font-size: 1.17em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+  }
+  .right_cont{
+      grid-column: span 2;
+      text-align: left;
+      padding-top: 9px;
+      padding-bottom: 9px;
+  }
+
+  .left_cont{
+      padding-top: 9px;
+      padding-bottom: 9px;
+      justify-content: center;
+      text-align: left;
+      
+      font-weight: 500;
+  }
+
+.cell-2-body{
+    padding:10px;
+}
+
+
+@media only screen and (max-width: 1486px) {
+    .container{
+        grid-gap: 10px;
+    }
+
+ .cell-1, .cell-3 {
+     
+     margin-left: 10%;
+     
+ }
+ .cell-4 {
+     width: 60%;
+     margin-left: 20px;
+
+ }
+
+ .cell-5{
+  width: 60%;
+  margin-left: -20px;
+}
+
+} 
+
+
+@media only screen and (max-width: 930px) {
+    .container{
+        grid-gap: 10px;
+    }
+
+ .cell-1, .cell-3 {
+     
+     margin-left: 10%;
+     
+ }
+ .cell-4, .cell-5{
+     max-width: 175px;
+     
+ }
+
+} 
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+      .cell-1, .cell-2, .cell-3, .cell-4{
+        width: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .cell-4{
+        max-width: 623.12px;
+    }
+  
+    .cell-5{
+        display: none;
+    }
+    .container {
+ 
+      grid-template-columns: 1fr;
+      /* grid-template-rows: 1fr; */
+      display: flex;
+      flex-direction: column;
+
+    }
+}
+.btn_edit {
+    background-color: #008CBA; /* Blue */
+    color: white;  
+    border: rgb(0, 60, 255);;
+    width: 3rem;
+    padding: 8px;
+    float:left;
+    cursor: pointer;
+    border-radius: 2px;
+    margin: 3px;
+  }
+
+
